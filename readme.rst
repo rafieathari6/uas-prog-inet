@@ -1,9 +1,9 @@
 ###################
 Tugas UAS Mata Kuliah Pemrograman Internet
 ###################
-NIM  					: 02032113015
-Nama 					: Rafie Athari Shazni
-Program Studi : Teknik Informatika
+| NIM  					: 02032113015 
+| Nama 					: Rafie Athari Shazni 
+| Program Studi : Teknik Informatika 
 
 *******************
 Server Requirements
