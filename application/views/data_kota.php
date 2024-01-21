@@ -37,7 +37,7 @@
                             <tr>
                                 <td><?=$no++?></td>
                                 <td>
-                                    <b>Nama Kabpuaten/Kota :</b> <?= $city->NamaKota ?> <br>
+                                    <b>Nama Kabupaten/Kota :</b> <?= $city->NamaKota ?> <br>
                                     <b>Bupati/Walikota :</b> <?= $city->NamaPemimpin ?><br>
                                     <b>Jenis Wilayah :</b> <?= $city->JenisKota ?><br>
                                     <b>Berdiri Sejak :</b> <?= $city->TglBerdiri ?><br>
