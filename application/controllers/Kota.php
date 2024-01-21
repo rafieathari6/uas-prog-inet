@@ -104,7 +104,20 @@ class Kota extends CI_Controller
         return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
     }
 
-    public function statistik()
+    public function print_statistik()
+    {
+        $dompdf = new Dompdf();
+        $options = $dompdf->getOptions();
+        $bar = $this->setDataStatistik();
+        $options->set('isJavascriptEnabled', TRUE);
+        $options->setIsRemoteEnabled(true);
+        $dompdf->setPaper('A4', 'landscape');
+        $dompdf->loadHtml($this->load->view('chart', compact('bar'), TRUE));
+        $dompdf->render();
+        return $dompdf->stream('Statistik Wilayah Kota.pdf');
+    }
+
+    protected function setDataStatistik()
     {
         $cities = $this->kota_model->getAll()->get();
         $label = array_map(function ($value) {
@@ -129,6 +142,12 @@ class Kota extends CI_Controller
         ->data()->exchangeArray($value);
         $bar->addDataSet($kota);
 
+        return $bar;
+    }
+
+    public function statistik()
+    {
+        $bar = $this->setDataStatistik();
         $this->load->view('chart', compact('bar'));
     }
 }
