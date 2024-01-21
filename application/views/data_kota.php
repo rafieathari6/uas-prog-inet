@@ -58,7 +58,7 @@
                                             <input type="hidden" name="<?=$csrf['name'];?>" value="<?=$csrf['hash'];?>" />
                                             <input type="hidden" name="id" value="<?=$city->IDKota?>" />
                                             <div class="modal-header">						
-                                                <h4 class="modal-title">Hapus Mahasiswa</h4>
+                                                <h4 class="modal-title">Hapus Data Kota Ini</h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                             </div>
                                             <div class="modal-body">					
@@ -79,7 +79,7 @@
                                         <form method="POST" action="<?=base_url('/kota/update/'.$city->IDKota)?>">
                                             <input type="hidden" name="<?=$csrf['name'];?>" value="<?=$csrf['hash'];?>" />
                                             <div class="modal-header">						
-                                                <h4 class="modal-title">Tambah Mahasiswa</h4>
+                                                <h4 class="modal-title">Update Data Kota</h4>
                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                             </div>
                                             <div class="modal-body">					
